@@ -20,6 +20,8 @@ sudo chmod 777 /etc/X11/Xwrapper.config
 sudo echo "allowed_users=anybody" > /etc/X11/Xwrapper.config
 sudo /usr/share/debconf/fix_db.pl && sudo dpkg --configure -a
 
+cd ~/Downloads
+
 # Install Sublime Text 3
 wget https://download.sublimetext.com/sublime-text_build-3126_amd64.deb
 sudo dpkg -i sublime-text_build-3126_amd64.deb
@@ -35,3 +37,13 @@ sudo dpkg -i vscode.deb
 sudo apt-get install -y gvfs-bin gconf2
 wget https://github.com/atom/atom/releases/download/v1.11.1/atom-amd64.deb
 sudo dpkg -i atom-amd64.deb
+
+# Install Firefox
+sudo apt-get install -y firefox
+
+# Google Chrome Dependencies
+sudo apt-get install -y -f fonts-liberation libappindicator1 libindicator7
+
+# Install Google Chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
